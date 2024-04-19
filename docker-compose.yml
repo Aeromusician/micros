@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  mymusic_service:
+    restart: on-failure
+    container_name: mymusic_service
+    build: mymusic_service/
+    ports:
+      - "8000:80"
+
+  tracksearch_service:
+    restart: on-failure
+    container_name: tracksearch_service
+    build: tracksearch_service/
+    ports:
+      - "8001:80"
